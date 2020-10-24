@@ -1,0 +1,16 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: scdemo-payment
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource    #当前数据源操作类型
+    driver-class-name: com.mysql.cj.jdbc.Driver   #Mysql驱动表
+    url: jdbc:mysql://localhost:3306/springCloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.gaoliang.springcloud.entities    #所有Entity别名类所在包
