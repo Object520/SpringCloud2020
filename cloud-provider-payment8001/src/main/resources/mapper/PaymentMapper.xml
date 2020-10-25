@@ -8,7 +8,7 @@
     </resultMap>
 
     <insert id="insert" parameterType="com.gaoliang.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">
-      insert payment payment(serial) values (#{payment})
+      insert into payment(serial) values (#{serial})
     </insert>
 
     <select id="getPaymentById" parameterType="java.lang.Long" resultType="com.gaoliang.springcloud.entities.Payment">
