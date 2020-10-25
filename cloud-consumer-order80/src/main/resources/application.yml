@@ -3,10 +3,19 @@ server:
 
 spring:
   application:
-    name: scdemo-payment
+    name: cloud-order-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    #当前数据源操作类型
     driver-class-name: com.mysql.cj.jdbc.Driver   #Mysql驱动表
     url: jdbc:mysql://localhost:3306/springCloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: root
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+    #表示是否将自己注册进EurekaServer 默认为true
+    register-with-eureka: true
+    #是否从EurekaServer 抓取已有注册信息 默认为true, 单节点无所谓, 集群必须设置为true 才能配合 Ribbon 使用达到负载均衡
+    fetch-registry: true
