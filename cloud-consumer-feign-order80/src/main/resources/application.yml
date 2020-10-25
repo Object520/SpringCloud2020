@@ -22,3 +22,9 @@ eureka:
   instance:
     # 服务名:ip:端口
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+ribbon:
+  # 建立连接所用的时间
+  ReadTimeout: 5000
+  # 建立连接后服务读取到可用资源所用的时间
+  ConnectTimeout: 5000
