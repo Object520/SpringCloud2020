@@ -28,3 +28,8 @@ ribbon:
   ReadTimeout: 5000
   # 建立连接后服务读取到可用资源所用的时间
   ConnectTimeout: 5000
+
+logging:
+  level:
+    # feign日志级别及监控的端口
+    com.gaoliang.springcloud.service.PaymentFeignService: debug
