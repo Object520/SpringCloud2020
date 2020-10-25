@@ -20,3 +20,7 @@ eureka:
     register-with-eureka: true
     #是否从EurekaServer 抓取已有注册信息 默认为true, 单节点无所谓, 集群必须设置为true 才能配合 Ribbon 使用达到负载均衡
     fetch-registry: true
+
+  instance:
+    # 服务名:ip:端口
+    instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
