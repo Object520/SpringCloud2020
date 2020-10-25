@@ -13,3 +13,9 @@ eureka:
     # 服务查询地址
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/
+
+  server:
+    # 禁用自我保护
+    enable-self-preservation: false
+    # 2秒踢除
+    eviction-interval-timer-in-ms: 2000
