@@ -40,7 +40,7 @@ public class PaymentController {
     }
 
     @GetMapping(value = "/payment/get/{id}")
-    public CommonResult create(@PathVariable("id") Long id) {//前端请求 http://localhost:8001/payment/get/1
+    public CommonResult getPaymentById(@PathVariable("id") Long id) {//前端请求 http://localhost:8001/payment/get/1
         Payment payment = paymentService.getPaymentById(id);
         if (payment != null) {
             log.info("查询成功, id{}", id);
