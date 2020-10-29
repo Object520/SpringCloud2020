@@ -17,6 +17,9 @@
     <module>cloud-consumer-feign-order80</module>
     <module>cloud-provider-hystrix-payment8001</module>
       <module>cloud-consumer-feign-hystrix-order80</module>
+      <module>cloudalibaba-consumer-nacos-order83</module>
+    <module>cloudalibaba-provider-payment9001</module>
+      <module>cloudalibaba-provider-payment9002</module>
   </modules>
   <packaging>pom</packaging>
 
