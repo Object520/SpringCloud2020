@@ -22,3 +22,9 @@ eureka:
   instance:
     # 服务名:ip:端口
     instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+
+# feign开启降级处理
+feign:
+  hystrix:
+    enabled: true
+
