@@ -22,6 +22,7 @@
     <module>cloudalibaba-provider-payment9002</module>
     <module>cloud-gateway-gateway9527</module>
     <module>cloudalibaba-config-nacos-client3377</module>
+    <module>cloud-comsumer-hystrix-dashboard9001</module>
   </modules>
   <packaging>pom</packaging>
 
