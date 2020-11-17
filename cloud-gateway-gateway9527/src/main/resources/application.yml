@@ -19,6 +19,15 @@ spring:
         uri: lb://cloud-payment-service
         predicates:
         - Path=/payment/lb/**
+        # 在该时间之后访问才有效 Before和Between的使用类似
+        - After=2020-11-18T00:25:25.078+08:00[Asia/Shanghai]
+        # 需要携带此cookie才能访问
+        - Cookie=username,vincent
+        # 请求头要有X-Request-Id且属性值为整数的正则表达式
+        - Header=X-Request-Id, \d+
+        # 此外还有Host\Method\Path等
+
+
       discovery:
         locator:
           # 开启从注册中心动态创建路由功能,根据微服务名路由
