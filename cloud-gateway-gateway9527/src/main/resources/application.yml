@@ -22,9 +22,9 @@ spring:
         # 在该时间之后访问才有效 Before和Between的使用类似
         - After=2020-11-18T00:25:25.078+08:00[Asia/Shanghai]
         # 需要携带此cookie才能访问
-        - Cookie=username,vincent
+        #- Cookie=username,gaoliang
         # 请求头要有X-Request-Id且属性值为整数的正则表达式
-        - Header=X-Request-Id, \d+
+        #- Header=X-Request-Id, \d+
         # 此外还有Host\Method\Path等
 
 
