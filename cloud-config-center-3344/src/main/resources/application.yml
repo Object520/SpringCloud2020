@@ -1,0 +1,24 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Object520/springcloud-config.git
+          username: 1871559972@qq.com
+          password: password
+          search-paths:
+          - springcloud-config
+      # 读取分支
+      label: main
+
+
+# 服务注册到Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
